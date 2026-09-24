@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('a[href*="delete.php"]').forEach(a=>a.addEventListener('click',e=>{if(!confirm('هل أنت متأكد من الحذف؟'))e.preventDefault();}));});

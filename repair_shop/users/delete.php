@@ -1,0 +1,1 @@
+<?php require '../config/database.php';auth();if(($_SESSION['role']??'')!=='admin')die('ليس لديك صلاحية');$id=(int)$_GET['id'];if($id!=$_SESSION['user_id']){$s=$pdo->prepare('DELETE FROM users WHERE id=?');$s->execute([$id]);}header('Location:index.php');exit;
